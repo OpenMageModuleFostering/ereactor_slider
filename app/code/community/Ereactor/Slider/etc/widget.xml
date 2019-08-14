@@ -1,0 +1,16 @@
+<?xml version="1.0"?>
+<widgets>
+	<slider_slider type="slider/slider" translate="name description" module="slider">
+		<name>Ereactor Slideshow</name>
+		<description type="desc">Adds a slideshow</description>
+		<parameters>
+			<slideshowId translate="label">
+				<label>Slideshow</label>
+				<visible>1</visible>
+				<required>1</required>
+				<type>select</type>
+				<source_model>ereactor_slider/slideshow</source_model>
+			</slideshowId>
+		</parameters>
+	</slider_slider>
+</widgets>

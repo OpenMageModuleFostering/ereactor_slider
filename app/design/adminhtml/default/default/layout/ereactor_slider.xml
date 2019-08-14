@@ -1,0 +1,71 @@
+<?xml version="1.0"?>
+<layout version="0.0.1">
+	<adminhtml_ereactor_slider_index>
+		<reference name="content">
+			<block type="slider/adminhtml_slideshow" name="slideshow" />
+		</reference>
+	</adminhtml_ereactor_slider_index>
+	
+	<adminhtml_ereactor_slider_grid>
+		<block type="slider/adminhtml_slideshow_grid" name="root" />
+	</adminhtml_ereactor_slider_grid>
+	
+	<adminhtml_ereactor_slider_new>
+		<update handle="adminhtml_slideshow_edit" />
+	</adminhtml_ereactor_slider_new>
+	
+	<adminhtml_ereactor_slider_edit>
+		<update handle="editor" />
+		<reference name="head">
+			<action method="addJs"><script>ereactor_slider/jquery-1.9.1.min.js</script></action>
+			<action method="addJs"><script>ereactor_slider/adminhtml/edit-slideshow.min.js</script></action>
+			<action method="addJs"><script>ereactor_slider/jquery.nivo-slider.js</script></action>
+			<action method="addCss"><stylesheet>../../../frontend/base/default/css/ereactor_slider/default.css</stylesheet></action>
+			<action method="addCss"><stylesheet>../../../frontend/base/default/css/ereactor_slider/nivo-slider.css</stylesheet></action>
+			<action method="addCss"><stylesheet>ereactor_slider/style.min.css</stylesheet></action>
+		</reference>
+		<reference name="content">
+			<block type="slider/adminhtml_slideshow_edit" name="slideshow_edit" />
+		</reference>
+		<reference name="left">
+			<block type="slider/adminhtml_slideshow_edit_tabs" name="slideshow_edit_tabs">
+				<block type="slider/adminhtml_slideshow_edit_tab_general" name="slideshow_edit_tab_general" />
+				<block type="slider/adminhtml_slideshow_edit_tab_slides" name="slideshow_edit_tab_slides">
+					<block type="slider/adminhtml_slide_quickadd" name="slide_quickadd" />
+					<block type="slider/adminhtml_slide_batch" name="slide_batch" template="ereactor/slider/slide/batch.phtml"/>
+					<block type="slider/adminhtml_slide_grid" name="slide_grid"/>
+				</block>
+				
+				<action method="addTab">
+					<name>general</name>
+					<block>slideshow_edit_tab_general</block>
+				</action>
+				
+				<action method="addTab">
+					<name>slides</name>
+					<block>slideshow_edit_tab_slides</block>
+				</action>
+			</block>
+			<block type="slider/adminhtml_slideshow_preview" name="slideshow_preview" template="ereactor/slider/slideshow/preview.phtml"/>
+		</reference>
+	</adminhtml_ereactor_slider_edit>
+	
+	<adminhtml_ereactor_slider_slide_grid>
+		<block type="slider/adminhtml_slide_grid" name="root"/>
+	</adminhtml_ereactor_slider_slide_grid>
+	
+	<adminhtml_ereactor_slider_slide_preview>
+		<block type="slider/adminhtml_slide_preview" name="root" template="ereactor/slider/slide/preview.phtml"/>
+	</adminhtml_ereactor_slider_slide_preview>
+	
+	<adminhtml_ereactor_slider_slide_edit>
+		<block type="core/text_list" name="root">
+			<block type="slider/adminhtml_slide_preview" name="slide_preview" template="ereactor/slider/slide/preview.phtml"/>
+			<block type="slider/adminhtml_slide_quickadd" name="slide_quickedit"/>
+		</block>
+	</adminhtml_ereactor_slider_slide_edit>
+	
+	<adminhtml_ereactor_slider_slide_batchaddimagesform>
+		<block type="slider/adminhtml_slide_batch_images" name="root"/>
+	</adminhtml_ereactor_slider_slide_batchaddimagesform>
+</layout>

@@ -1,0 +1,54 @@
+<?xml version="1.0"?>
+<config>
+	<menu>
+		<cms>
+			<children>
+				<ereactor_slider translate="title" module="slider">
+					<title>E-reactor Slideshows</title> 
+					<action>adminhtml/ereactor_slider/index</action>
+					<sort_order>50</sort_order>
+				</ereactor_slider>
+			</children>
+		</cms>
+	</menu>
+	
+	<acl>
+		<resources>
+			<admin>
+				<children>
+					<slideshow translate="title" module="slider">
+						<title>Slideshows</title>
+						<sort_order>65</sort_order>
+						<children>
+							<manage translate="title">
+								<title>Manage slideshows</title>
+								<sort_order>0</sort_order>
+								<children>
+									<save translate="title">
+										<title>Save slideshows</title>
+										<sort_order>0</sort_order>
+									</save>
+									<delete translate="title">
+										<title>Delete slideshows</title>
+										<sort_order>10</sort_order>
+									</delete>
+								</children>
+							</manage>
+						</children>
+					</slideshow>
+					<system>
+						<children>
+							<config>
+								<children>
+									<ereactor_slider>
+										<title>e-reactor Slider options</title>
+									</ereactor_slider>
+								</children>
+							</config>
+						</children>
+					</system>
+				</children>
+			</admin>
+		</resources>
+	</acl>
+</config>

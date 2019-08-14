@@ -1,0 +1,41 @@
+<?xml version="1.0"?>
+<config>
+	<tabs>
+		<ereactor_config translate="label" module="slider">
+			<label>e-reactor Extensions</label>
+			<sort_order>9000</sort_order>
+		</ereactor_config>
+	</tabs>
+	<sections>
+		<ereactor_slider translate="label" module="slider">
+			<label>e-reactor Slider options</label>
+			<tab>ereactor_config</tab>
+			<frontend_type>text</frontend_type>
+			<sort_order>1</sort_order>
+			<show_in_default>1</show_in_default>
+			<show_in_website>1</show_in_website>
+			<show_in_store>1</show_in_store>
+			<groups>
+				<activation translate="label">
+					<label>Activation</label>
+					<frontend_type>text</frontend_type>
+					<sort_order>1</sort_order>
+					<show_in_default>1</show_in_default>
+					<show_in_website>1</show_in_website>
+					<show_in_store>1</show_in_store>
+					<fields>
+						<license_key translate="label comment">
+							<label>License key</label>
+							<comment>You must create a license key from the http://shop.e-reactor.dk website and enter it in this field</comment>
+							<frontend_type>text</frontend_type>
+							<sort_order>1</sort_order>
+							<show_in_default>1</show_in_default>
+							<show_in_website>1</show_in_website>
+							<show_in_store>1</show_in_store>
+						</license_key>
+					</fields>
+				</activation>
+			</groups>
+		</ereactor_slider>
+	</sections>
+</config>

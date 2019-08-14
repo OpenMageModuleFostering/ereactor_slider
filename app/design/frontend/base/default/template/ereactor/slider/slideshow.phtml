@@ -1,0 +1,19 @@
+<?php if ($this->getIncludeScripts()) : ?>
+<script type="text/javascript" src="/js/ereactor_slider/jquery-1.9.1.min.js"></script>
+<script type="text/javascript" src="/js/ereactor_slider/jquery.nivo-slider.js"></script>
+<style>@import url("/skin/frontend/base/default/css/ereactor_slider/default.css")</style>
+<style>@import url("/skin/frontend/base/default/css/ereactor_slider/nivo-slider.css")</style>
+<?php endif; ?>
+
+<div class="nivo-slider-wrapper theme-default">
+	<div id="slider-<?php echo $this->_nameInLayout; ?>" class="nivoSlider" style="<?php echo $this->getSlideshow()->getDimensions(); ?>">
+		<?php foreach ($this->getSlides() as $slide) : ?>
+			<?php echo $slide; ?>
+		<?php endforeach; ?>
+	</div>
+</div>
+<script type="text/javascript">
+jQuery(function() {
+	jQuery('#slider-<?php echo $this->_nameInLayout; ?>').nivoSlider(<?php echo $this->getSlideshow()->getNivoParams(); ?>);
+});
+</script>

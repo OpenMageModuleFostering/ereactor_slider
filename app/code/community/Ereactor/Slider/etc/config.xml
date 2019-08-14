@@ -1,0 +1,68 @@
+<?xml version="1.0"?>
+<config>
+	<modules>
+		<Ereactor_Slider>
+			<version>1.0.0</version>
+		</Ereactor_Slider>
+	</modules>
+	
+	<global>
+		<models>
+			<ereactor_slider>
+				<class>Ereactor_Slider_Model</class>
+				<resourceModel>ereactor_slider_resource</resourceModel>
+			</ereactor_slider>
+			<ereactor_slider_resource>
+				<class>Ereactor_Slider_Model_Resource</class>
+				<entities>
+					<slideshow>
+						<table>ereactor_slider_slideshow</table>
+					</slideshow>
+					<slide>
+						<table>ereactor_slider_slide</table>
+					</slide>
+				</entities>
+			</ereactor_slider_resource>
+		</models>
+		<helpers>
+			<slider>
+				<class>Ereactor_Slider_Helper</class>
+			</slider>
+		</helpers>
+		<blocks>
+			 <slider>
+				<class>Ereactor_Slider_Block</class>
+			 </slider>
+		</blocks>
+		<resources>
+			<ereactor_slider_setup>
+				<setup>
+					<module>Ereactor_Slider</module>
+					<class>Mage_Core_Model_Resource_Setup</class>
+				</setup>
+			</ereactor_slider_setup>
+		</resources>
+	</global>
+	
+	<adminhtml>
+		<layout>
+			<updates>
+				<ereactor_slider>
+					<file>ereactor_slider.xml</file>
+				</ereactor_slider>
+			</updates>
+		</layout>
+	</adminhtml>
+	
+	<admin>
+		<routers>
+			<adminhtml>
+				<args>
+					<modules>
+						<Ereactor_Slider before="Mage_Adminhtml">Ereactor_Slider_Adminhtml</Ereactor_Slider>
+					</modules>
+				</args>
+			</adminhtml>
+		</routers>
+	</admin>
+</config>

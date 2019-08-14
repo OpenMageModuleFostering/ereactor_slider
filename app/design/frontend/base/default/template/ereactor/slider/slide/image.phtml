@@ -1,0 +1,9 @@
+<?php
+$caption = $this->getCaption() ? 'title="' . $this->getCaption() . '"' : '';
+if ($this->getImageLink()) :
+	$target = $this->getTarget() ? ('target="' . $this->getTarget() . '" ') : '';
+	$rel = $this->getFollow() ? ('rel="' . $this->getFollow() . '" ') : '';?>
+	<a href="<?php echo $this->getImageLink(); ?>" <?php echo $target . ' ' . $rel . ' ' . $caption; ?>><img src="<?php echo $this->getImageUrl(); ?>" alt="Slide" /></a>
+<?php else: ?>
+	<img src="<?php echo $this->getImageUrl(); ?>" alt="Slide" <?php echo $caption; ?> />
+<?php endif; ?>

@@ -1,0 +1,13 @@
+<div id="ereactor-slider-preview" class="nivo-slider-wrapper theme-default">
+	<div id="slider-<?php echo $this->_nameInLayout; ?>" class="nivoSlider" style="width: 200px; height: 75px;">
+		<img src="/media/ereactor_slider/grey-small.gif" alt="Slide" />
+		<img src="/media/ereactor_slider/orange-small.gif" alt="Slide" />
+		<img src="/media/ereactor_slider/grey-small.gif" alt="Slide" />
+		<img src="/media/ereactor_slider/orange-small.gif" alt="Slide" />
+	</div>
+</div>
+<script type="text/javascript">
+	jQuery(function() {
+		jQuery('#slider-<?php echo $this->_nameInLayout; ?>').nivoSlider(<?php echo $this->getNivoParams(); ?>);
+	});
+</script>
