@@ -1,16 +1,19 @@
 {
-    "name": "OpenMageModuleFostering/Ereactor_Slider",
+    "name": "OpenMageModuleFostering\/Ereactor_Slider",
     "type": "magento-module",
     "license": "GPL",
     "homepage": "",
     "description": "Create a slideshow featuring Images or HTML and display it as a widget anywhere in your store.",
     "authors": [
-    {
-        "name": "Mihai Andrei Livadariu",
-        "email": "livadariu.andrei@gmail.com"
-    }
-],
+        {
+            "name": "Mihai Andrei Livadariu",
+            "email": "livadariu.andrei@gmail.com"
+        }
+    ],
     "suggest": {
-        "magento-hackathon/magento-composer-installer": "*"
-    }
+        "magento-hackathon\/magento-composer-installer": "*"
+    },
+    "keywords": [
+        "openmage-module"
+    ]
 }
