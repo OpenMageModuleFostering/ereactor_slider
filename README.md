@@ -1,3 +1,5 @@
+
+
 ## Original Package Description
 
 Create a slideshow featuring Images or HTML and display it as a widget anywhere in your store.
